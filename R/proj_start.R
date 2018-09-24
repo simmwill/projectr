@@ -40,6 +40,7 @@
 #' @param data_dir character. The directory where the raw data exist. If
 #' \code{NULL}, the data directory is created as a subdirectory.
 #'
+#' @import git2r
 #' @export
 #'
 proj_start <- function(proj_dir, data_dir = NULL) {
