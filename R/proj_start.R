@@ -54,10 +54,6 @@ proj_start <- function(proj_dir, data_dir = NULL) {
   # Create directory
   dir.create(proj_dir, recursive = TRUE)
 
-  # Convert to absolute path. Needs to be run again after creating the directory
-  # because symlinks can only resolved for existing directories.
-#  directory <- absolute(directory)
-
   # Configure name of project
   name <- basename(proj_dir)
 
@@ -77,7 +73,7 @@ proj_start <- function(proj_dir, data_dir = NULL) {
   if (is.null(data_dir)) {
     dir.create(file.path(proj_dir, "data"))
   } else {
-    dir.create(file.path(data_dir))
+    dir.create(file.path(data_dir), recursive = TRUE)
     file.symlink(file.path(data_dir), file.path(proj_dir, "data"))
   }
 
