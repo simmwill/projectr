@@ -9,43 +9,6 @@ templates <- list(
 .RData
 .Ruserdata
 data
-
-',
-  `analysis/template.Rmd` = '
----
-title: "Template"
-author: "Author"
-date: "`r Sys.Date()`"
-  output:
-  html_document:
-    code_folding: hide
-    toc: true
-    toc_float: true
-hitheme: tomorrow
-highlighter: highlight.js
----
-
-
-```{r setup, include = FALSE}
-source(here::here("source", "impute.R"))
-
-library(tidyverse)
-
-knitr::opts_chunk$set(echo = TRUE,
-warning = FALSE,
-message = FALSE,
-fig.width = 8,
-fig.height = 6
-)
-
-theme_set(theme_bw() + theme(legend.position = "bottom"))
-```
-
-<!-- ############################################ -->
-<!-- ############################################ -->
-
-## Overview
-
 ',
   README.md = '
 # {name}
