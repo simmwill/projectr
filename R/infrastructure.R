@@ -13,7 +13,17 @@ data
   README.md = '
 # {name}
 
-description
+## Generic Project Directory
+
+Description
+
+Contains directories
+
+* `analysis/`
+* `data/`
+* `drafts/`
+* `results/`
+* `source/`
 ',
   "Rproj" = '
 Version: 1.0
