@@ -3,13 +3,17 @@
 # These templates are used by proj_start().
 
 templates <- list(
-  .gitignore = '
+  `.gitignore` = '
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 data
 ',
+  `analysis/.gitkeep` = '',
+  `drafts/.gitkeep` = '',
+  `results/.gitkeep` = '',
+  `source/.gitkeep` = '',
   README.md = '
 # {name}
 
@@ -17,13 +21,16 @@ data
 
 Description
 
-Contains directories
+Structure
 
-* `analysis/`
-* `data/`
-* `drafts/`
-* `results/`
-* `source/`
+* `analysis/` is intended to contain all the source R Markdown files that
+implement the analyses for the project.
+* `data/` will either be a symbolic link to an external data directory, or
+a subdirectory
+* `drafts/` will contain all references and relevant paper drafts
+* `results/` will contain results exported by the analysis files
+* `source/` will contain bare scripts (typically containing functions sourced
+by the full analysis files)
 ',
   "Rproj" = '
 Version: 1.0
