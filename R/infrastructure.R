@@ -41,6 +41,8 @@ a subdirectory
 * `results/` will contain results exported by the analysis files
 * `source/` will contain bare scripts (typically containing functions sourced
 by the full analysis files)
+
+project structured using the [projectr](https://github.com/jeff-goldsmith/projectr) package.
 ',
   "Rproj" = '
 Version: 1.0
