@@ -19,9 +19,19 @@ data
 
 ## Generic Project Directory
 
-Description
+This is a generic project template. It might help to add a brief description.
 
-Structure
+When the project has been created, I recommend running
+
+```usethis::use_github(private = FALSE, protocol = "https")```
+
+to create a private remote repo corresponding to this project. If this project
+is edited across multiple machines, it may be necessary to add symbolic links
+to data directories using
+
+```ln -s PATH/TO/DATA data```
+
+## Structure
 
 * `analysis/` is intended to contain all the source R Markdown files that
 implement the analyses for the project.
