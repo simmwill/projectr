@@ -23,7 +23,7 @@ This is a generic project template. It might help to add a brief description.
 
 When the project has been created, I recommend running
 
-```usethis::use_github(private = FALSE, protocol = "https")```
+```usethis::use_github(private = TRUE, protocol = "https")```
 
 to create a private remote repo corresponding to this project. If this project
 is edited across multiple machines, it may be necessary to add symbolic links
