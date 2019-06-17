@@ -6,7 +6,9 @@ Authors@R: person("Jeff", "Goldsmith", email = "ajg2202@cumc.columbia.edu",
 Description: Basically a stripped-down version of \code{workflowr}, this 
   package is used to create directory and git infrastructure for new 
   projects. 
-Depends: R (>= 3.5.1)
+Depends: R (>= 3.5.0)
+Imports:
+  git2r, glue
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
