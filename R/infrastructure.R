@@ -4,11 +4,17 @@
 
 templates <- list(
   `.gitignore` = '
+## RStudio files
 .Rproj.user
+
+## History
 .Rhistory
+
+## data directories and files
+data
+analysis/*_cache/
 .RData
 .Ruserdata
-data
 ',
   `analysis/.gitkeep` = '',
   `drafts/.gitkeep` = '',
