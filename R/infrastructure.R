@@ -13,6 +13,7 @@ templates <- list(
 ## data directories and files
 data
 analysis/*_cache/
+drafts/*_cache/
 .RData
 .Ruserdata
 ',
