@@ -10,23 +10,32 @@
 #'
 #' \preformatted{|--- .gitignore
 #' |--- <directory>.Rproj
-#' |--- analysis/
+#' |--- code/
 #' |--- data/
-#' |--- drafts/
-#' |--- results/
+#' |--- end_products/
+#' |--- notes/
+#' |--- reports/
+#' |--- resources/
+#' |--- scratch/
 #' |--- source/
 #' |--- README.md
 #' }
 #'
-#' \code{analysis/} is intended to contain all the source R Markdown
+#' \code{code/} is intended to contain all the source R Markdown
 #' files that implement the analyses for the project.
 #'
 #' \code{data/} will either be a symbolic link to an external data
 #' directory, or a subdirectory.
 #'
-#' \code{drafts/} will contain all references and relevant paper drafts
+#' \code{end_products/} will contain the end products of the analysis:
+#' poster presentation, powerpoint, abstract, manuscript, response to
+#' reviewers, etc.
 #'
-#' \code{results/} will contain results exported by the analysis files
+#' \code{notes/} will contain notes on analysis
+#'
+#' \code{reports/} will contain results exported by the analysis files.
+#'
+#' \code{scratch/} will contain "scratch paper" code and miscellaneous files.
 #'
 #' \code{source/} will contain bare scripts (typically containing
 #' functions sourced by the full analysis files)
@@ -67,8 +76,8 @@ proj_start <- function(proj_dir, data_dir = NULL) {
 
   # Create subdirectories
   dir.create.vectorized <- Vectorize(dir.create, vectorize.args = "path")
-  dir.create.vectorized(file.path(proj_dir, c("analysis", "drafts", "results",
-                                               "source")),
+  dir.create.vectorized(file.path(proj_dir, c("code", "end_products", "notes", "reports", "resources",
+                                               "scratch", "source")),
                         showWarnings = FALSE)
   if (is.null(data_dir)) {
     dir.create(file.path(proj_dir, "data"))

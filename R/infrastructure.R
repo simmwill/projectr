@@ -6,16 +6,20 @@ templates <- list(
   `.gitignore` = '
 ## RStudio files
 .Rproj.user
-
 ## History
 .Rhistory
-
 ## data directories and files
 data
-analysis/*_cache/
-drafts/*_cache/
+code/*_cache/
+reports/*_cache/
 .RData
 .Ruserdata
+## notes
+notes
+## MacOS files
+.DS_Store
+.DS_Store?
+.Trashes
 ',
   `analysis/.gitkeep` = '',
   `drafts/.gitkeep` = '',
@@ -39,17 +43,21 @@ to data directories using
 ```ln -s PATH/TO/DATA data```
 
 ## Structure
+* `code/` is intended to contain all the source R Markdown
+files that implement the analyses for the project.
+* `data/` will either be a symbolic link to an external data
+directory, or a subdirectory.
+* `end_products/` will contain the end products of the analysis:
+poster presentation, powerpoint, abstract, manuscript, response to
+reviewers, etc.
+* `notes/` will contain notes on analysis
+* `reports/` will contain results exported by the analysis files.
+* `scratch/`will contain "scratch paper" code and miscellaneous files.
+* `source/` will contain bare scripts (typically containing
+functions sourced by the full analysis files)
 
-* `analysis/` is intended to contain all the source R Markdown files that
-implement the analyses for the project.
-* `data/` will either be a symbolic link to an external data directory, or
-a subdirectory
-* `drafts/` will contain all references and relevant paper drafts
-* `results/` will contain results exported by the analysis files
-* `source/` will contain bare scripts (typically containing functions sourced
-by the full analysis files)
-
-project structured using the [projectr](https://github.com/jeff-goldsmith/projectr) package.
+project structured using the [projectr](https://github.com/jeff-goldsmith/projectr) package,
+with slight modifications by [Will Simmons](https://github.com/simmwill).
 ',
   "Rproj" = '
 Version: 1.0
