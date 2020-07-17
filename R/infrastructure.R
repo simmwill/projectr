@@ -21,9 +21,11 @@ notes
 .DS_Store?
 .Trashes
 ',
-  `analysis/.gitkeep` = '',
-  `drafts/.gitkeep` = '',
-  `results/.gitkeep` = '',
+  `code/.gitkeep` = '',
+  `end_products/.gitkeep` = '',
+  `notes/.gitkeep` = '',
+  `reports/.gitkeep` = '',
+  `scratch/.gitkeep` = '',
   `source/.gitkeep` = '',
   README.md = '
 # {name}
